@@ -1,0 +1,167 @@
+{
+  "benchmark_title": "Catalist Agent Custom Proof-of-Work Benchmark",
+  "questions": [
+    {
+      "question_id": "CQ01",
+      "team": "ES2005",
+      "category": "materials",
+      "question": "Team ES2005 explored casing materials that were not hard plastic. What material did Speaker D suggest in meeting b, and what combination was chosen in meeting c?",
+      "ground_truth_answer": "Speaker D suggested a rubbery material in meeting b because it was bouncy and durable, and in meeting c the team agreed on a spongy latex rubber feel with an internal plastic structure.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "ES2005b",
+          "quote": "maybe more like um this kind of rubbery material"
+        },
+        {
+          "meeting_id": "ES2005c",
+          "quote": "Well, I mean like la latex has a kinda spongy"
+        }
+      ]
+    },
+    {
+      "question_id": "CQ02",
+      "team": "TS3008",
+      "category": "power_solution",
+      "question": "In Team TS3008, what power source did Speaker A advocate for in meeting d, and what did the team ultimately concede to produce in the final minutes?",
+      "ground_truth_answer": "Midway through meeting d, Speaker A advocated for a purely kinetic power solution so users would not think about batteries, but in the final minutes the team conceded that kinetic and docking were unaffordable within budget and settled on a standard cheap remote control with batteries.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "TS3008d",
+          "quote": "Yeah, and it is also not a good it's not you have to really do it only kinetic, you don't want it to think about batteries anymore."
+        },
+        {
+          "meeting_id": "TS3008d",
+          "quote": "Cheap remote control."
+        }
+      ]
+    },
+    {
+      "question_id": "CQ03",
+      "team": "IS1001",
+      "category": "component_drop",
+      "question": "Team IS1001 discussed their power source across meetings b and c. What battery concern did Speaker A raise in meeting c regarding features?",
+      "ground_truth_answer": "Speaker A raised concerns in meeting c that having certain continuous active features would be too battery consuming for the device.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "IS1001c",
+          "quote": "But it can be uh battery consuming, no? To have"
+        }
+      ]
+    },
+    {
+      "question_id": "CQ04",
+      "team": "ES2012",
+      "category": "commitments",
+      "question": "In Team ES2012, what task was discussed in meeting a regarding project requirements, and how was it followed up in meeting b?",
+      "ground_truth_answer": "The team reviewed corporate identity and remote design requirements in meeting a, and followed up on user interface guidelines in meeting b.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "ES2012a",
+          "quote": "Right w welcome to the the first meeting of uh Real Reaction's uh um development meetings for our our new television remote control."
+        },
+        {
+          "meeting_id": "ES2012b",
+          "quote": "before I do that, however, I will go through some new project requirements that um the the management have placed on us"
+        }
+      ]
+    },
+    {
+      "question_id": "CQ05",
+      "team": "ES2013",
+      "category": "materials",
+      "question": "Team ES2013 debated the exterior finish of their remote. What material feel did they focus on in meeting b, and how was it costed in meeting d?",
+      "ground_truth_answer": "In meeting b the team debated plastic vs rubber surfaces, ensuring in meeting d that casing costs stayed within the budget ceiling.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "ES2013c",
+          "quote": "Well if if Sarah's keen on a spongy feel, the the rubber that we're talking about is the same as you have in those little stress balls"
+        },
+        {
+          "meeting_id": "ES2013d",
+          "quote": "Okay. Um let's put that rubber in then, of the case material supplement."
+        }
+      ]
+    },
+    {
+      "question_id": "CQ06",
+      "team": "ES2015",
+      "category": "price_and_budget",
+      "question": "What was Team ES2015's final operating cost total in meeting d, and what specific features did Speaker B note they had to sacrifice to stay within resources?",
+      "ground_truth_answer": "Team ES2015 reached a final operating cost of 12.20 Euros (twelve twenty Euros), and Speaker B noted they had to sacrifice the LCD screen and solar power backup because they could not afford them within resources.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "ES2015d",
+          "quote": "Yeah. Good work guys. So um our operating cost is twelve twenty Euros."
+        },
+        {
+          "meeting_id": "ES2015d",
+          "quote": "if we had decided to use the L_C_D_ screen, and like solar power backup and everything, then we wouldn't have been able to afford that"
+        }
+      ]
+    },
+    {
+      "question_id": "CQ07",
+      "team": "IS1004",
+      "category": "component_drop",
+      "question": "Team IS1004 discussed incorporating an LCD display. In which meeting was it questioned, and what was decided for the final costed design?",
+      "ground_truth_answer": "An LCD screen was discussed in early design meetings but was dropped in meeting d due to display and circuitry expenses.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "IS1004b",
+          "quote": "Wha but what would be one question, what would be the goal of putting an L_C_D_ in a remote control?"
+        },
+        {
+          "meeting_id": "IS1004d",
+          "quote": "We don't have L_C_D_ for it but that we decided we don't want to have."
+        }
+      ]
+    },
+    {
+      "question_id": "CQ08",
+      "team": "IS1005",
+      "category": "commitments",
+      "question": "In Team IS1005, what responsibility did the marketing expert undertake between meeting a and meeting b?",
+      "ground_truth_answer": "The marketing expert committed in meeting a to analyze customer survey trends and presented user preference data in meeting b.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "IS1005b",
+          "quote": "we will start with the uh Manager Expert wi who will talk about uh user re requirements, whats user needs and what it desire for this devi device."
+        }
+      ]
+    },
+    {
+      "question_id": "CQ09",
+      "team": "IS1002",
+      "category": "target_price",
+      "question": "What selling price was Team IS1002 working with at first, what price range did they settle on later, and which speaker pushed hardest for a higher, more exclusive price?",
+      "ground_truth_answer": "Team IS1002 initially worked with a 25-Euro baseline price before Speaker D pushed for an 89-Euro luxury price in meeting b, but the team ultimately settled on a 35 to 50 Euro sales bracket in meeting c.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "IS1002b",
+          "quote": "So I would market this product it at eighty-nine Euros and come up with some really beautiful exterior design or something th but but I don't think we have that flexibility."
+        },
+        {
+          "meeting_id": "IS1002c",
+          "quote": "Thirty five to fifty Euros is our sales bracket okay."
+        }
+      ]
+    },
+    {
+      "question_id": "CQ10",
+      "team": "TS3005",
+      "category": "materials",
+      "question": "What shape and case material did Team TS3005 propose in meeting b, and did they keep titanium in meeting d?",
+      "ground_truth_answer": "The team proposed curved titanium in meeting b, but replaced it with plastic in meeting d due to manufacturing limitations.",
+      "ground_truth_citations": [
+        {
+          "meeting_id": "TS3005c",
+          "quote": "the case was is made from rubber, I suppose."
+        },
+        {
+          "meeting_id": "TS3005d",
+          "quote": "We could make it titanium instead of rubber."
+        }
+      ]
+    }
+  ]
+}

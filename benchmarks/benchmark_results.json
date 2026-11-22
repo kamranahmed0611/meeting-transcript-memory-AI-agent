@@ -1,0 +1,202 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "total_questions": 10,
+  "avg_latency_sec": 1.76,
+  "citation_accuracy": "21/21 (100.0%)",
+  "results": [
+    {
+      "question_id": "CQ01",
+      "team": "ES2005",
+      "question": "Team ES2005 explored casing materials that were not hard plastic. What material did Speaker D suggest in meeting b, and what combination was chosen in meeting c?",
+      "agent_answer": "Speaker D suggested using a rubbery material that is bouncy, durable, and ergonomic. In meeting c, the team discussed combining a plastic outer casing with a latex sheath to provide durability and a spongy feel.",
+      "ground_truth_answer": "Speaker D suggested a rubbery material in meeting b because it was bouncy and durable, and in meeting c the team agreed on a spongy latex rubber feel with an internal plastic structure.",
+      "citations": [
+        {
+          "meeting_id": "ES2005b",
+          "quote": "maybe more like um this kind of rubbery material, it's a bit more bouncy, like you said they get chucked around a lot."
+        },
+        {
+          "meeting_id": "ES2005c",
+          "quote": "so maybe s uh a sort of uh plastic initial plastic with a a latex kinda sheath?"
+        }
+      ],
+      "citations_verified": "2/2",
+      "latency_sec": 1.84
+    },
+    {
+      "question_id": "CQ02",
+      "team": "TS3008",
+      "question": "In Team TS3008, what power source did Speaker A advocate for in meeting d, and what did the team ultimately concede to produce in the final minutes?",
+      "agent_answer": "Speaker A advocated for a kinetic power source that would eliminate the need for batteries, but in the final minutes the team conceded to produce a basic remote control with batteries.",
+      "ground_truth_answer": "Midway through meeting d, Speaker A advocated for a purely kinetic power solution so users would not think about batteries, but in the final minutes the team conceded that kinetic and docking were unaffordable within budget and settled on a standard cheap remote control with batteries.",
+      "citations": [
+        {
+          "meeting_id": "TS3008d",
+          "quote": "you have to really do it only kinetic, you don't want it to think about batteries anymore."
+        },
+        {
+          "meeting_id": "TS3008d",
+          "quote": "this is then then our concept is ready."
+        }
+      ],
+      "citations_verified": "2/2",
+      "latency_sec": 1.92
+    },
+    {
+      "question_id": "CQ03",
+      "team": "IS1001",
+      "question": "Team IS1001 discussed their power source across meetings b and c. What battery concern did Speaker A raise in meeting c regarding features?",
+      "agent_answer": "Speaker A (Industrial Designer) raised the concern in meeting c that having the backlight always on could consume too much battery power.",
+      "ground_truth_answer": "Speaker A raised concerns in meeting c that having certain continuous active features would be too battery consuming for the device.",
+      "citations": [
+        {
+          "meeting_id": "IS1001c",
+          "quote": "But it can be uh battery consuming, no? To have the light always on?"
+        }
+      ],
+      "citations_verified": "1/1",
+      "latency_sec": 1.58
+    },
+    {
+      "question_id": "CQ04",
+      "team": "ES2012",
+      "question": "In Team ES2012, what task was discussed in meeting a regarding project requirements, and how was it followed up in meeting b?",
+      "agent_answer": "In meeting a, the project team discussed general requirements and consumer preferences for a new television remote control, which were followed up in meeting b when Speaker A (Project Manager) introduced new management constraints such as covering television only and ensuring the product is simple and quick to market.",
+      "ground_truth_answer": "The team reviewed corporate identity and remote design requirements in meeting a, and followed up on user interface guidelines in meeting b.",
+      "citations": [
+        {
+          "meeting_id": "ES2012a",
+          "quote": "What's uh the the th th project is is here to do, is is to to get this this project up and moving"
+        },
+        {
+          "meeting_id": "ES2012b",
+          "quote": "I will go through some new project requirements that um the the management have placed on us"
+        }
+      ],
+      "citations_verified": "2/2",
+      "latency_sec": 1.7
+    },
+    {
+      "question_id": "CQ05",
+      "team": "ES2013",
+      "question": "Team ES2013 debated the exterior finish of their remote. What material feel did they focus on in meeting b, and how was it costed in meeting d?",
+      "agent_answer": "In meeting b, the team focused on a spongy rubber exterior feel for the remote. In meeting d, the team evaluated this design alongside a smooth hard plastic option and ultimately decided to include the rubber cover as a case material supplement within their budget of nine pounds twenty.",
+      "ground_truth_answer": "In meeting b the team debated plastic vs rubber surfaces, ensuring in meeting d that casing costs stayed within the budget ceiling.",
+      "citations": [
+        {
+          "meeting_id": "ES2013b",
+          "quote": "Well I think we can I I think we can really focus on this remote and and again bring the Real Reaction um brand in in and and get some positive marketing for our other tools"
+        },
+        {
+          "meeting_id": "ES2013d",
+          "quote": "So we have the two options we can follow, either the smooth hard plastic or the spongy rubber, depending on cost restraints."
+        },
+        {
+          "meeting_id": "ES2013d",
+          "quote": "Okay. Um let's put that rubber in then, of the case material supplement."
+        }
+      ],
+      "citations_verified": "3/3",
+      "latency_sec": 1.88
+    },
+    {
+      "question_id": "CQ06",
+      "team": "ES2015",
+      "question": "What was Team ES2015's final operating cost total in meeting d, and what specific features did Speaker B note they had to sacrifice to stay within resources?",
+      "agent_answer": "Team ES2015's final operating cost total in meeting d was twelve Euros and twenty cents, and Speaker B noted they had to sacrifice features like the LCD screen and solar power backup to stay within their resource limits.",
+      "ground_truth_answer": "Team ES2015 reached a final operating cost of 12.20 Euros (twelve twenty Euros), and Speaker B noted they had to sacrifice the LCD screen and solar power backup because they could not afford them within resources.",
+      "citations": [
+        {
+          "meeting_id": "ES2015d",
+          "quote": "our operating cost is twelve twenty Euros"
+        },
+        {
+          "meeting_id": "ES2015d",
+          "quote": "if we had decided to use the L_C_D_ screen, and like solar power backup and everything, then we wouldn't have been able to afford that"
+        }
+      ],
+      "citations_verified": "2/2",
+      "latency_sec": 1.69
+    },
+    {
+      "question_id": "CQ07",
+      "team": "IS1004",
+      "question": "Team IS1004 discussed incorporating an LCD display. In which meeting was it questioned, and what was decided for the final costed design?",
+      "agent_answer": "The inclusion of an LCD display was questioned in Meeting 2, and in Meeting 4 it was decided to omit it from the final costed design because they did not want to include an LCD screen.",
+      "ground_truth_answer": "An LCD screen was discussed in early design meetings but was dropped in meeting d due to display and circuitry expenses.",
+      "citations": [
+        {
+          "meeting_id": "IS1004b",
+          "quote": "Wha but what would be one question, what would be the goal of putting an L_C_D_ in a remote control?"
+        },
+        {
+          "meeting_id": "IS1004d",
+          "quote": "We don't have L_C_D_ for it but that we decided we don't want to have."
+        }
+      ],
+      "citations_verified": "2/2",
+      "latency_sec": 1.69
+    },
+    {
+      "question_id": "CQ08",
+      "team": "IS1005",
+      "question": "In Team IS1005, what responsibility did the marketing expert undertake between meeting a and meeting b?",
+      "agent_answer": "Between meeting a and meeting b, Bob Morris, the Marketing Expert, undertook the responsibility of performing the first project evaluation.",
+      "ground_truth_answer": "The marketing expert committed in meeting a to analyze customer survey trends and presented user preference data in meeting b.",
+      "citations": [
+        {
+          "meeting_id": "IS1005c",
+          "quote": "And the the Marketing Expert will do the first project evaluation."
+        }
+      ],
+      "citations_verified": "1/1",
+      "latency_sec": 1.36
+    },
+    {
+      "question_id": "CQ09",
+      "team": "IS1002",
+      "question": "What selling price was Team IS1002 working with at first, what price range did they settle on later, and which speaker pushed hardest for a higher, more exclusive price?",
+      "agent_answer": "Team IS1002 initially worked with a 25-Euro wholesale price baseline while Speaker D pushed hardest for an exclusive 89-Euro price tag, but the team later settled on a sales bracket of 35 to 50 Euros.",
+      "ground_truth_answer": "Team IS1002 initially worked with a 25-Euro baseline price before Speaker D pushed for an 89-Euro luxury price in meeting b, but the team ultimately settled on a 35 to 50 Euro sales bracket in meeting c.",
+      "citations": [
+        {
+          "meeting_id": "IS1002b",
+          "quote": "so what I did is I I decided that that this this needs to be a product in a in a sense can market itself. So what we've identified here as our main marketing stratagem is is in design."
+        },
+        {
+          "meeting_id": "IS1002b",
+          "quote": "So I would market this product it at eighty-nine Euros and come up with some really beautiful exterior design or something th but but I don't think we have that flexibility."
+        },
+        {
+          "meeting_id": "IS1002c",
+          "quote": "Thirty five to fifty Euros is our sales bracket okay. So the question is what we ca we make it for."
+        }
+      ],
+      "citations_verified": "3/3",
+      "latency_sec": 2.11
+    },
+    {
+      "question_id": "CQ10",
+      "team": "TS3005",
+      "question": "What shape and case material did Team TS3005 propose in meeting b, and did they keep titanium in meeting d?",
+      "agent_answer": "In meeting b, Team TS3005 proposed a remote control with single-curved round shapes and a rubber case. By meeting d, titanium was dropped from consideration in favor of rubber to stay within cost limits.",
+      "ground_truth_answer": "The team proposed curved titanium in meeting b, but replaced it with plastic in meeting d due to manufacturing limitations.",
+      "citations": [
+        {
+          "meeting_id": "TS3005c",
+          "quote": "I h I had an idea single covered uh curved, sorry, single curved. Uh so it's t two dimensional."
+        },
+        {
+          "meeting_id": "TS3005c",
+          "quote": "the case was is made from rubber, I suppose."
+        },
+        {
+          "meeting_id": "TS3005d",
+          "quote": "Uh. We could make it titanium instead of rubber."
+        }
+      ],
+      "citations_verified": "3/3",
+      "latency_sec": 1.85
+    }
+  ]
+}

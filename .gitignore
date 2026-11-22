@@ -1,0 +1,72 @@
+# ==============================================================================
+# Catalist Media Agentic AI - Git Ignore Specification
+# Prevents security vulnerabilities, secret leaks, and repository bloat.
+# ==============================================================================
+
+# 1. SECRETS, API KEYS & CREDENTIALS (CRITICAL - NEVER COMMIT)
+.env
+.env.local
+.env.*.local
+*.env
+!*.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+secrets/
+
+# 2. VIRTUAL ENVIRONMENTS
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# 3. PYTHON COMPILATION & CACHES
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# 4. LARGE GENERATED DATABASES & WORKING ARTIFACTS
+# (data/meeting_store.db is auto-generated in ~30s from transcripts/ via self-healing code)
+data/meeting_store.db
+data/meeting_store.db-journal
+data/meeting_store.db-wal
+data/meeting_store.db-shm
+data/checkpoints.json
+*.db
+*.sqlite
+*.sqlite3
+
+# 5. TEMPORARY FILES, SCRATCH SCRIPTS & LOGS
+*.log
+scripts/
+scratch/
+tmp/
+temp/
+*.tmp
+
+# 6. OPERATING SYSTEM & EDITOR JUNK
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# 7. IDE WORKSPACE ARTIFACTS
+.idea/
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/settings.json
