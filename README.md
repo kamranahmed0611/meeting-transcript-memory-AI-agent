@@ -358,6 +358,7 @@ All evaluations are automated and strictly graded using `eval_benchmarks.py`.
 ├── test_interactive.py          # Free-form query console with raw transcript context inspection
 ├── Launch_Catalist_App.bat      # 1-click Windows launcher for Web App
 ├── WRITEUP.md                   # Formal 1-page assessment report matching all rubric criteria
+├── CataList_Architectural_Writeup.pdf # Formal 1-page executive & architectural writeup report
 ├── PLANNING_AND_QUESTIONS.md    # Architecture design document & benchmark rubric alignment
 ├── .env.example                 # Environment configuration template
 └── requirements.txt             # Lightweight, standard Python dependencies
