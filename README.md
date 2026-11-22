@@ -17,6 +17,10 @@
       <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
     </a>
     &nbsp;
+    <a href="https://www.loom.com/share/78dc892a03e54ce8924998e890c15017">
+      <img src="https://img.shields.io/badge/Loom_Demo-Watch_Video_(4m)-625DF5?style=flat-square&logo=loom&logoColor=white" alt="Loom Demo Video"/>
+    </a>
+    &nbsp;
     <img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python Versions"/>
     <img src="https://img.shields.io/badge/AMI_Corpus-138_Meetings-FF6B4A?style=flat-square" alt="AMI Corpus"/>
     <img src="https://img.shields.io/badge/Synthesizer-Gemini_3.5_Flash_Lite-4285F4?style=flat-square&logo=google" alt="Gemini"/>
@@ -76,6 +80,7 @@ python eval_benchmarks.py --custom
 
 | Deliverable | Location | Description & Verification |
 | :--- | :--- | :--- |
+| **Demo Walkthrough Video** | [Watch on Loom (4 min)](https://www.loom.com/share/78dc892a03e54ce8924998e890c15017) | Screen walkthrough covering multi-meeting reversals ($a \to d$), Evidence Canvas line proofs, TS3012 leakage quarantine, and offline resilience. |
 | **Verified Answers** | [`answers.json`](answers.json) | **25/25 Official Answers** (strictly 1–2 sentences, 100% verbatim quotes) + **Team TS3012 Executive Brief** (4 sections, zero `TS3012d` leakage). |
 | **1-Page Write-Up (MD)** | [`WRITEUP.md`](WRITEUP.md) | Tight 1-page report covering model-vs-code boundary, $0 ingestion, 10k scaling, and 3 failure modes. |
 | **1-Page Write-Up (PDF)** | [`CataList_Architectural_Writeup.pdf`](CataList_Architectural_Writeup.pdf) | Formal single-page executive PDF with system dataflow diagram and empirical cost table. |
