@@ -25,6 +25,27 @@
 
 ---
 
+## ⚡ 4-Command Zero-Friction Quickstart
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/kamranahmed0611/meeting-transcript-memory-AI-agent.git
+cd meeting-transcript-memory-AI-agent
+
+# 2. Install lightweight dependencies
+pip install -r requirements.txt
+
+# 3. Configure Gemini API Key (Optional)
+export GEMINI_API_KEY="AIzaSyYourActualGeminiKeyHere"  # Linux/macOS
+# $env:GEMINI_API_KEY="AIzaSyYourActualGeminiKeyHere"   # Windows PowerShell
+
+# 4. Launch Interactive Web App or Automated Benchmark Grader
+python app.py                # Launches Gemini UI + Evidence Canvas at http://localhost:8080
+# python eval_benchmarks.py  # Grades all 25 official + 10 custom benchmark questions
+```
+
+> **Offline Evaluator Guarantee:** If `GEMINI_API_KEY` is omitted, the engine automatically and seamlessly activates its deterministic offline synthesizer (`Offline Granite + BM25 Fallback` using local 384-d normalized embeddings), enabling full grading and line-level verification offline with $0.00 network dependency.
+
 ## Executive Summary
 
 The **CataList Meeting Intelligence Memory Engine** solves the two fundamental failure modes of standard LLM RAG pipelines on long-form conversational transcripts: **temporal hallucination** (conflating early brainstorming with final meeting consensus) and **cross-team semantic drift** (pulling identical vocabulary like *"LCD"* or *"budget"* from unrelated teams).
