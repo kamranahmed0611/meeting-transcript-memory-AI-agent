@@ -100,18 +100,68 @@ python eval_benchmarks.py --custom
 The architecture enforces a strict **Model-vs-Code boundary**: deterministic code handles indexing and verification, while Gemini handles temporal reasoning.
 
 ```mermaid
-flowchart LR
-    A["Transcripts (138 Files)"] --> B["Deterministic Ingestion<br/>(Regex + SQLite FTS5)"]
-    B --> C["Hybrid Retriever<br/>(BM25 + 384-d Dense)"]
-    C --> D["Team Anchoring &<br/>Chronological Re-ranking"]
-    D --> E["Gemini 3.5 Flash Lite<br/>(Temporal Synthesis)"]
-    E --> F["Verifier Engine<br/>(Token-Exact Snapping)"]
-    F --> G["answers.json &<br/>Evidence Canvas"]
+flowchart TD
+    subgraph TIER1 ["1. Deterministic Ingestion ($0.00 LLM Cost)"]
+        RAW["138 Raw AMI Transcripts<br/>(48,148 Turns / ~676k Words)"]
+        REGEX["Regex Dialogue Parser<br/>(Speaker, Timestamp, Turn ID)"]
+        FTS5[("SQLite FTS5 Index<br/>Lexical BM25 Ranking")]
+        EMB[("Dense Vector Store<br/>384-d Normalized Embeddings")]
+        RAW --> REGEX
+        REGEX --> FTS5
+        REGEX --> EMB
+    end
 
-    style B fill:#0f172a,stroke:#38bdf8,color:#fff
-    style C fill:#0f172a,stroke:#38bdf8,color:#fff
-    style E fill:#0369a1,stroke:#38bdf8,color:#fff
-    style F fill:#059669,stroke:#34d399,color:#fff
+    subgraph TIER2 ["2. Query Routing & Security Quarantine"]
+        USER_Q["User / Benchmark Query"]
+        ROUTER{"Team Anchor &<br/>Security Router"}
+        QUARANTINE["Strict Security Quarantine<br/>(Enforces meeting_id != 'TS3012d')"]
+        TEAM_ISO["Team ID Boundary Filter<br/>(e.g., meeting_id LIKE 'TS3008%')"]
+        USER_Q --> ROUTER
+        ROUTER -->|"TS3012 Brief"| QUARANTINE
+        ROUTER -->|"General Query"| TEAM_ISO
+    end
+
+    subgraph TIER3 ["3. Temporal Retrieval & Dialogue Bridging"]
+        HYBRID["Hybrid Fusion Search<br/>Score = 0.5 * BM25 + 0.5 * Dense"]
+        CHRONO["Chronological Re-Ranking<br/>Meeting a → b → c → d Precedence"]
+        BRIDGING["Dialogue Gap-Bridging<br/>Adjacency Slices (t-1 ↔ t ↔ t+1)"]
+        HYBRID --> CHRONO
+        CHRONO --> BRIDGING
+    end
+
+    FTS5 --> HYBRID
+    EMB --> HYBRID
+    QUARANTINE --> HYBRID
+    TEAM_ISO --> HYBRID
+
+    subgraph TIER4 ["4. Dual-Engine Synthesis"]
+        KEY_CHECK{"Gemini API Key<br/>Configured?"}
+        GEMINI["Gemini 3.5 Flash Lite<br/>(Temporal Synthesis & Reasoning)"]
+        OFFLINE["Deterministic Fallback<br/>(Local Granite + BM25 Synthesizer)"]
+        BRIDGING --> KEY_CHECK
+        KEY_CHECK -->|"Online (Default)"| GEMINI
+        KEY_CHECK -->|"Offline Fallback"| OFFLINE
+    end
+
+    subgraph TIER5 ["5. Verbatim Verification & Delivery"]
+        CANDIDATE["Candidate Answer & Citations"]
+        VERIFIER{"verifier.py Engine<br/>Token-Exact Substring Match?"}
+        SNAPPER["Sliding-Window Token Snapper<br/>(Repairs Punctuation & Disfluencies)"]
+        FINAL["Production Delivery<br/>• answers.json (25/25 + Brief)<br/>• Interactive Evidence Canvas"]
+        GEMINI --> CANDIDATE
+        OFFLINE --> CANDIDATE
+        CANDIDATE --> VERIFIER
+        VERIFIER -->|"Exact (100%)"| FINAL
+        VERIFIER -->|"Sub-Token Drift"| SNAPPER
+        SNAPPER --> FINAL
+    end
+
+    style TIER1 fill:#0b1329,stroke:#38bdf8,stroke-width:1px,color:#f8fafc
+    style TIER2 fill:#0b1329,stroke:#f59e0b,stroke-width:1px,color:#f8fafc
+    style TIER3 fill:#0b1329,stroke:#818cf8,stroke-width:1px,color:#f8fafc
+    style TIER4 fill:#0b1329,stroke:#ec4899,stroke-width:1px,color:#f8fafc
+    style TIER5 fill:#0b1329,stroke:#10b981,stroke-width:1px,color:#f8fafc
+    style FINAL fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5
 ```
 
 ### Key Engineering Highlights:
